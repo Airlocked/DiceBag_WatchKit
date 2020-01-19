@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B026897323D50C3100F64690 /* PageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B026897223D50C3100F64690 /* PageLoader.swift */; };
 		B066BBA523D3109700816BEB /* NumberHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B066BBA423D3109700816BEB /* NumberHelper.swift */; };
 		B09F826D23D2434D008A15F8 /* Dice Bag.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = B09F826C23D2434D008A15F8 /* Dice Bag.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B09F827323D2434D008A15F8 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B09F827123D2434D008A15F8 /* Interface.storyboard */; };
@@ -61,6 +62,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B026897223D50C3100F64690 /* PageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageLoader.swift; sourceTree = "<group>"; };
 		B066BBA423D3109700816BEB /* NumberHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberHelper.swift; sourceTree = "<group>"; };
 		B09F826823D2434D008A15F8 /* DiceBag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiceBag.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B09F826C23D2434D008A15F8 /* Dice Bag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dice Bag.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				B066BBA423D3109700816BEB /* NumberHelper.swift */,
+				B026897223D50C3100F64690 /* PageLoader.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 			files = (
 				B0A1F71723D2FFD80061C6A8 /* DiceModel.swift in Sources */,
 				B09F828323D2434E008A15F8 /* ExtensionDelegate.swift in Sources */,
+				B026897323D50C3100F64690 /* PageLoader.swift in Sources */,
 				B066BBA523D3109700816BEB /* NumberHelper.swift in Sources */,
 				B09F828123D2434E008A15F8 /* DicePageController.swift in Sources */,
 			);
