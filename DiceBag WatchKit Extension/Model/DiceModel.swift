@@ -16,6 +16,10 @@ class DiceModel: NSObject {
 		self.image = image
 		self.numberOfSides = numberOfSides
 	}
+	
+	func roll() -> Int {
+		return Int(arc4random_uniform(UInt32(numberOfSides)) + 1)
+	}
 }
 
 extension DiceModel {

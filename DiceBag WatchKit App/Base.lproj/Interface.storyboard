@@ -9,15 +9,22 @@
         <!--D20-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller identifier="D20" fullScreen="YES" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Dice_Bag" customModuleProvider="target">
+                <controller identifier="D20" fullScreen="YES" id="AgC-eL-Hgc" customClass="DicePageController" customModule="DiceBag_WatchKit_Extension">
                     <items>
                         <group width="1" alignment="center" verticalAlignment="center" layout="vertical" id="Gtc-V1-Jip">
                             <items>
-                                <group width="1" alignment="center" backgroundImage="d20_icon" contentMode="scaleAspectFit" id="HJA-DJ-LpW" userLabel="DiceRollGroup">
+                                <group width="150" height="150" alignment="center" backgroundImage="d20_icon" contentMode="scaleAspectFit" layout="vertical" id="HJA-DJ-LpW" userLabel="DiceRollGroup">
                                     <items>
-                                        <label width="150" height="150" alignment="center" verticalAlignment="center" text="20" textAlignment="center" id="SAJ-PY-A0N" userLabel="RollResultLabel">
-                                            <fontDescription key="font" type="system" weight="semibold" pointSize="70"/>
-                                        </label>
+                                        <group width="1" alignment="center" verticalAlignment="center" layout="vertical" id="LNt-d3-KeJ">
+                                            <items>
+                                                <label height="60" alignment="center" text="20" textAlignment="center" id="SAJ-PY-A0N" userLabel="RollResultLabel">
+                                                    <fontDescription key="font" type="system" weight="semibold" pointSize="70"/>
+                                                </label>
+                                                <label alignment="center" text="Label" textAlignment="center" numberOfLines="2" id="XKu-qe-xHE">
+                                                    <fontDescription key="font" type="system" pointSize="14"/>
+                                                </label>
+                                            </items>
+                                        </group>
                                     </items>
                                     <gestureRecognizers>
                                         <tapGestureRecognizer id="5Jy-51-WU5">
@@ -35,197 +42,238 @@
                     </items>
                     <connections>
                         <outlet property="diceCountLabel" destination="hhO-9G-1qg" id="EkD-Xh-J5K"/>
-                        <outlet property="diceRollGroup" destination="HJA-DJ-LpW" id="P6d-pJ-dqB"/>
-                        <outlet property="diceRollResult" destination="SAJ-PY-A0N" id="Tqw-SY-Gl0"/>
-                        <segue destination="t9Q-Jk-VDv" kind="relationship" relationship="nextPage" id="kaD-td-Fzn"/>
+                        <outlet property="diceRollGroup" destination="HJA-DJ-LpW" id="G9p-Ix-EfO"/>
+                        <outlet property="diceRollResultLabel" destination="SAJ-PY-A0N" id="GQr-Xh-4jd"/>
+                        <outlet property="subrollResultLabel" destination="XKu-qe-xHE" id="l9D-g9-6cY"/>
+                        <segue destination="h5V-Qe-HKa" kind="relationship" relationship="nextPage" id="e8X-QT-pU6"/>
                     </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="21" y="-21"/>
         </scene>
         <!--D12-->
-        <scene sceneID="usF-22-Tgd">
+        <scene sceneID="zWd-2u-283">
             <objects>
-                <controller identifier="D12" fullScreen="YES" id="t9Q-Jk-VDv" customClass="InterfaceController" customModule="Dice_Bag" customModuleProvider="target">
+                <controller identifier="D12" fullScreen="YES" id="h5V-Qe-HKa" customClass="DicePageController" customModule="DiceBag_WatchKit_Extension">
                     <items>
-                        <group width="1" alignment="center" verticalAlignment="center" layout="vertical" id="IfF-k1-TIU">
+                        <group width="1" alignment="center" verticalAlignment="center" layout="vertical" id="i9h-iL-dUD">
                             <items>
-                                <group width="1" alignment="center" backgroundImage="d20_icon" contentMode="scaleAspectFit" id="oek-qj-RMd" userLabel="DiceRollGroup">
+                                <group width="150" height="150" alignment="center" backgroundImage="d20_icon" contentMode="scaleAspectFit" layout="vertical" id="n96-o6-Mmn" userLabel="DiceRollGroup">
                                     <items>
-                                        <label width="150" height="150" alignment="center" verticalAlignment="center" text="20" textAlignment="center" id="m6m-I5-AG1" userLabel="RollResultLabel">
-                                            <fontDescription key="font" type="system" weight="semibold" pointSize="70"/>
-                                        </label>
+                                        <group width="1" alignment="center" verticalAlignment="center" layout="vertical" id="r2a-H3-gwe">
+                                            <items>
+                                                <label height="60" alignment="center" text="20" textAlignment="center" id="GjX-HJ-EON" userLabel="RollResultLabel">
+                                                    <fontDescription key="font" type="system" weight="semibold" pointSize="70"/>
+                                                </label>
+                                                <label alignment="center" text="Label" textAlignment="center" numberOfLines="2" id="Is8-3y-FWr">
+                                                    <fontDescription key="font" type="system" pointSize="14"/>
+                                                </label>
+                                            </items>
+                                        </group>
                                     </items>
                                     <gestureRecognizers>
-                                        <tapGestureRecognizer id="5MV-Ua-BuR">
+                                        <tapGestureRecognizer id="r4y-iq-IbC">
                                             <connections>
-                                                <action selector="DiceTapped:" destination="t9Q-Jk-VDv" id="HT7-Wh-pnT"/>
+                                                <action selector="DiceTapped:" destination="h5V-Qe-HKa" id="CNf-81-dxd"/>
                                             </connections>
                                         </tapGestureRecognizer>
                                     </gestureRecognizers>
                                 </group>
-                                <label alignment="center" text="x 10" id="qHs-ig-u4r">
+                                <label alignment="center" text="x 10" id="pti-uN-5l9">
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="24"/>
                                 </label>
                             </items>
                         </group>
                     </items>
                     <connections>
-                        <outlet property="diceCountLabel" destination="qHs-ig-u4r" id="aZ4-9y-rsX"/>
-                        <outlet property="diceRollGroup" destination="oek-qj-RMd" id="K5S-dx-Aow"/>
-                        <outlet property="diceRollResult" destination="m6m-I5-AG1" id="Pbf-cC-xg9"/>
-                        <segue destination="Q38-dL-306" kind="relationship" relationship="nextPage" id="lm9-z0-KTk"/>
+                        <outlet property="diceCountLabel" destination="pti-uN-5l9" id="SbR-Xb-bbG"/>
+                        <outlet property="diceRollGroup" destination="n96-o6-Mmn" id="i1B-Ey-oeb"/>
+                        <outlet property="diceRollResultLabel" destination="GjX-HJ-EON" id="EaC-By-8Ez"/>
+                        <outlet property="subrollResultLabel" destination="Is8-3y-FWr" id="L08-Te-ym0"/>
+                        <segue destination="qIQ-2g-cnI" kind="relationship" relationship="nextPage" id="ro6-1W-hV5"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="256" y="-21"/>
+            <point key="canvasLocation" x="246" y="-21"/>
         </scene>
         <!--D10-->
-        <scene sceneID="dRb-Ou-Sr9">
+        <scene sceneID="oYj-sS-uDp">
             <objects>
-                <controller identifier="D10" fullScreen="YES" id="Q38-dL-306" customClass="InterfaceController" customModule="Dice_Bag" customModuleProvider="target">
+                <controller identifier="D10" fullScreen="YES" id="qIQ-2g-cnI" customClass="DicePageController" customModule="DiceBag_WatchKit_Extension">
                     <items>
-                        <group width="1" alignment="center" verticalAlignment="center" layout="vertical" id="y7j-is-wJ3">
+                        <group width="1" alignment="center" verticalAlignment="center" layout="vertical" id="mpF-kq-ZyF">
                             <items>
-                                <group width="1" alignment="center" backgroundImage="d20_icon" contentMode="scaleAspectFit" id="wnz-Cv-Avk" userLabel="DiceRollGroup">
+                                <group width="150" height="150" alignment="center" backgroundImage="d20_icon" contentMode="scaleAspectFit" layout="vertical" id="Hih-vN-Gci" userLabel="DiceRollGroup">
                                     <items>
-                                        <label width="150" height="150" alignment="center" verticalAlignment="center" text="20" textAlignment="center" id="XsJ-Up-aXF" userLabel="RollResultLabel">
-                                            <fontDescription key="font" type="system" weight="semibold" pointSize="70"/>
-                                        </label>
+                                        <group width="1" alignment="center" verticalAlignment="center" layout="vertical" id="K1e-Qk-6SH">
+                                            <items>
+                                                <label height="60" alignment="center" text="20" textAlignment="center" id="qlb-zl-qcZ" userLabel="RollResultLabel">
+                                                    <fontDescription key="font" type="system" weight="semibold" pointSize="70"/>
+                                                </label>
+                                                <label alignment="center" text="Label" textAlignment="center" numberOfLines="2" id="MOb-rO-18W">
+                                                    <fontDescription key="font" type="system" pointSize="14"/>
+                                                </label>
+                                            </items>
+                                        </group>
                                     </items>
                                     <gestureRecognizers>
-                                        <tapGestureRecognizer id="12P-e4-udi">
+                                        <tapGestureRecognizer id="Rdl-CZ-6tz">
                                             <connections>
-                                                <action selector="DiceTapped:" destination="Q38-dL-306" id="KWk-Xi-SID"/>
+                                                <action selector="DiceTapped:" destination="qIQ-2g-cnI" id="N5q-42-2wj"/>
                                             </connections>
                                         </tapGestureRecognizer>
                                     </gestureRecognizers>
                                 </group>
-                                <label alignment="center" text="x 10" id="E5R-I4-A2T">
+                                <label alignment="center" text="x 10" id="r45-8d-HWe">
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="24"/>
                                 </label>
                             </items>
                         </group>
                     </items>
                     <connections>
-                        <outlet property="diceCountLabel" destination="E5R-I4-A2T" id="qCH-FV-lYn"/>
-                        <outlet property="diceRollGroup" destination="wnz-Cv-Avk" id="fLW-jE-116"/>
-                        <outlet property="diceRollResult" destination="XsJ-Up-aXF" id="b5w-Yx-BPO"/>
-                        <segue destination="Ne8-7u-U1L" kind="relationship" relationship="nextPage" id="wZh-de-uON"/>
+                        <outlet property="diceCountLabel" destination="r45-8d-HWe" id="AMe-k5-EUe"/>
+                        <outlet property="diceRollGroup" destination="Hih-vN-Gci" id="SYk-R1-YHO"/>
+                        <outlet property="diceRollResultLabel" destination="qlb-zl-qcZ" id="May-R5-KWm"/>
+                        <outlet property="subrollResultLabel" destination="MOb-rO-18W" id="ay1-EQ-1Sv"/>
+                        <segue destination="Xio-Ru-IUc" kind="relationship" relationship="nextPage" id="LVn-y9-PBY"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="500" y="-21"/>
+            <point key="canvasLocation" x="472" y="-21"/>
         </scene>
         <!--D8-->
-        <scene sceneID="VCE-Kr-YBZ">
+        <scene sceneID="K7E-oH-cgO">
             <objects>
-                <controller identifier="D8" fullScreen="YES" id="Ne8-7u-U1L" customClass="InterfaceController" customModule="Dice_Bag" customModuleProvider="target">
+                <controller identifier="D8" fullScreen="YES" id="Xio-Ru-IUc" customClass="DicePageController" customModule="DiceBag_WatchKit_Extension">
                     <items>
-                        <group width="1" alignment="center" verticalAlignment="center" layout="vertical" id="BrS-Ts-7lt">
+                        <group width="1" alignment="center" verticalAlignment="center" layout="vertical" id="tb4-K8-5J6">
                             <items>
-                                <group width="1" alignment="center" backgroundImage="d20_icon" contentMode="scaleAspectFit" id="xmJ-XZ-0MX" userLabel="DiceRollGroup">
+                                <group width="150" height="150" alignment="center" backgroundImage="d20_icon" contentMode="scaleAspectFit" layout="vertical" id="XAt-Sk-d0g" userLabel="DiceRollGroup">
                                     <items>
-                                        <label width="150" height="150" alignment="center" verticalAlignment="center" text="20" textAlignment="center" id="3DC-v6-WUg" userLabel="RollResultLabel">
-                                            <fontDescription key="font" type="system" weight="semibold" pointSize="70"/>
-                                        </label>
+                                        <group width="1" alignment="center" verticalAlignment="center" layout="vertical" id="2ic-4c-kAR">
+                                            <items>
+                                                <label height="60" alignment="center" text="20" textAlignment="center" id="LGB-Jh-Bbq" userLabel="RollResultLabel">
+                                                    <fontDescription key="font" type="system" weight="semibold" pointSize="70"/>
+                                                </label>
+                                                <label alignment="center" text="Label" textAlignment="center" numberOfLines="2" id="R0c-U4-VCN">
+                                                    <fontDescription key="font" type="system" pointSize="14"/>
+                                                </label>
+                                            </items>
+                                        </group>
                                     </items>
                                     <gestureRecognizers>
-                                        <tapGestureRecognizer id="AbC-o8-08u">
+                                        <tapGestureRecognizer id="dTz-PM-3Jw">
                                             <connections>
-                                                <action selector="DiceTapped:" destination="Ne8-7u-U1L" id="o6d-EX-sfq"/>
+                                                <action selector="DiceTapped:" destination="Xio-Ru-IUc" id="XTR-EI-p2C"/>
                                             </connections>
                                         </tapGestureRecognizer>
                                     </gestureRecognizers>
                                 </group>
-                                <label alignment="center" text="x 10" id="ehd-Qt-6n0">
+                                <label alignment="center" text="x 10" id="Axs-BT-35E">
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="24"/>
                                 </label>
                             </items>
                         </group>
                     </items>
                     <connections>
-                        <outlet property="diceCountLabel" destination="ehd-Qt-6n0" id="6Zz-qk-qLV"/>
-                        <outlet property="diceRollGroup" destination="xmJ-XZ-0MX" id="wn5-Xl-a7a"/>
-                        <outlet property="diceRollResult" destination="3DC-v6-WUg" id="af8-fh-I5l"/>
-                        <segue destination="PCq-MO-nCF" kind="relationship" relationship="nextPage" id="4sW-DF-6ig"/>
+                        <outlet property="diceCountLabel" destination="Axs-BT-35E" id="Ozy-Fm-NtW"/>
+                        <outlet property="diceRollGroup" destination="XAt-Sk-d0g" id="N0m-X9-LPU"/>
+                        <outlet property="diceRollResultLabel" destination="LGB-Jh-Bbq" id="XaI-HM-Mca"/>
+                        <outlet property="subrollResultLabel" destination="R0c-U4-VCN" id="w3d-0p-FZ8"/>
+                        <segue destination="PW0-hM-CS5" kind="relationship" relationship="nextPage" id="dfv-vL-bsn"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="747" y="-21"/>
+            <point key="canvasLocation" x="699" y="-21"/>
         </scene>
         <!--D6-->
-        <scene sceneID="295-WE-CIK">
+        <scene sceneID="ujV-BE-EOe">
             <objects>
-                <controller identifier="D6" fullScreen="YES" id="PCq-MO-nCF" customClass="InterfaceController" customModule="Dice_Bag" customModuleProvider="target">
+                <controller identifier="D6" fullScreen="YES" id="PW0-hM-CS5" customClass="DicePageController" customModule="DiceBag_WatchKit_Extension">
                     <items>
-                        <group width="1" alignment="center" verticalAlignment="center" layout="vertical" id="ath-eq-ceO">
+                        <group width="1" alignment="center" verticalAlignment="center" layout="vertical" id="t15-0A-sgO">
                             <items>
-                                <group width="1" alignment="center" backgroundImage="d20_icon" contentMode="scaleAspectFit" id="DrX-ET-h0t" userLabel="DiceRollGroup">
+                                <group width="150" height="150" alignment="center" backgroundImage="d20_icon" contentMode="scaleAspectFit" layout="vertical" id="My6-j3-4V3" userLabel="DiceRollGroup">
                                     <items>
-                                        <label width="150" height="150" alignment="center" verticalAlignment="center" text="20" textAlignment="center" id="uNX-Ta-0Q4" userLabel="RollResultLabel">
-                                            <fontDescription key="font" type="system" weight="semibold" pointSize="70"/>
-                                        </label>
+                                        <group width="1" alignment="center" verticalAlignment="center" layout="vertical" id="6Xp-tn-E1d">
+                                            <items>
+                                                <label height="60" alignment="center" text="20" textAlignment="center" id="fup-UH-Y86" userLabel="RollResultLabel">
+                                                    <fontDescription key="font" type="system" weight="semibold" pointSize="70"/>
+                                                </label>
+                                                <label alignment="center" text="Label" textAlignment="center" numberOfLines="2" id="Q62-9M-zXx">
+                                                    <fontDescription key="font" type="system" pointSize="14"/>
+                                                </label>
+                                            </items>
+                                        </group>
                                     </items>
                                     <gestureRecognizers>
-                                        <tapGestureRecognizer id="RcS-E5-eMU">
+                                        <tapGestureRecognizer id="Wii-xd-lau">
                                             <connections>
-                                                <action selector="DiceTapped:" destination="PCq-MO-nCF" id="zoZ-6e-dYy"/>
+                                                <action selector="DiceTapped:" destination="PW0-hM-CS5" id="RGi-X0-ybf"/>
                                             </connections>
                                         </tapGestureRecognizer>
                                     </gestureRecognizers>
                                 </group>
-                                <label alignment="center" text="x 10" id="jOR-5L-Hwq">
+                                <label alignment="center" text="x 10" id="nVZ-yb-Tbr">
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="24"/>
                                 </label>
                             </items>
                         </group>
                     </items>
                     <connections>
-                        <outlet property="diceCountLabel" destination="jOR-5L-Hwq" id="Dgs-VL-Zff"/>
-                        <outlet property="diceRollGroup" destination="DrX-ET-h0t" id="Ru9-Yw-W20"/>
-                        <outlet property="diceRollResult" destination="uNX-Ta-0Q4" id="Agh-c6-WIK"/>
-                        <segue destination="Yp2-Up-i0W" kind="relationship" relationship="nextPage" id="H3i-fs-9e9"/>
+                        <outlet property="diceCountLabel" destination="nVZ-yb-Tbr" id="FKO-88-6Z5"/>
+                        <outlet property="diceRollGroup" destination="My6-j3-4V3" id="ST3-yF-ydT"/>
+                        <outlet property="diceRollResultLabel" destination="fup-UH-Y86" id="dgR-EU-dgN"/>
+                        <outlet property="subrollResultLabel" destination="Q62-9M-zXx" id="FKc-fE-l0Z"/>
+                        <segue destination="g2n-t8-RJu" kind="relationship" relationship="nextPage" id="We2-Kv-L4v"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="987" y="-21"/>
+            <point key="canvasLocation" x="934" y="-21"/>
         </scene>
         <!--D4-->
-        <scene sceneID="d1R-pl-7lV">
+        <scene sceneID="2Jb-e8-1So">
             <objects>
-                <controller identifier="D4" fullScreen="YES" id="Yp2-Up-i0W" customClass="InterfaceController" customModule="Dice_Bag" customModuleProvider="target">
+                <controller identifier="D4" fullScreen="YES" id="g2n-t8-RJu" customClass="DicePageController" customModule="DiceBag_WatchKit_Extension">
                     <items>
-                        <group width="1" alignment="center" verticalAlignment="center" layout="vertical" id="VHM-jT-9Kd">
+                        <group width="1" alignment="center" verticalAlignment="center" layout="vertical" id="usA-c0-JME">
                             <items>
-                                <group width="1" alignment="center" backgroundImage="d20_icon" contentMode="scaleAspectFit" id="JKw-rF-yf1" userLabel="DiceRollGroup">
+                                <group width="150" height="150" alignment="center" backgroundImage="d20_icon" contentMode="scaleAspectFit" layout="vertical" id="vpH-e0-7a5" userLabel="DiceRollGroup">
                                     <items>
-                                        <label width="150" height="150" alignment="center" verticalAlignment="center" text="20" textAlignment="center" id="ict-Uq-TwR" userLabel="RollResultLabel">
-                                            <fontDescription key="font" type="system" weight="semibold" pointSize="70"/>
-                                        </label>
+                                        <group width="1" alignment="center" verticalAlignment="center" layout="vertical" id="gW2-6c-Smq">
+                                            <items>
+                                                <label height="60" alignment="center" text="20" textAlignment="center" id="GDv-g4-l9x" userLabel="RollResultLabel">
+                                                    <fontDescription key="font" type="system" weight="semibold" pointSize="70"/>
+                                                </label>
+                                                <label alignment="center" text="Label" textAlignment="center" numberOfLines="2" id="Ynh-Zo-hOw">
+                                                    <fontDescription key="font" type="system" pointSize="14"/>
+                                                </label>
+                                            </items>
+                                        </group>
                                     </items>
                                     <gestureRecognizers>
-                                        <tapGestureRecognizer id="NrM-29-35u">
+                                        <tapGestureRecognizer id="zRQ-iQ-Iwq">
                                             <connections>
-                                                <action selector="DiceTapped:" destination="Yp2-Up-i0W" id="QfZ-tk-8xU"/>
+                                                <action selector="DiceTapped:" destination="g2n-t8-RJu" id="hP2-BW-eco"/>
                                             </connections>
                                         </tapGestureRecognizer>
                                     </gestureRecognizers>
                                 </group>
-                                <label alignment="center" text="x 10" id="jA2-jk-u1R">
+                                <label alignment="center" text="x 10" id="vL6-iP-V6o">
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="24"/>
                                 </label>
                             </items>
                         </group>
                     </items>
                     <connections>
-                        <outlet property="diceCountLabel" destination="jA2-jk-u1R" id="nOo-eQ-y9I"/>
-                        <outlet property="diceRollGroup" destination="JKw-rF-yf1" id="No8-WZ-H8S"/>
-                        <outlet property="diceRollResult" destination="ict-Uq-TwR" id="0q6-75-cuM"/>
+                        <outlet property="diceCountLabel" destination="vL6-iP-V6o" id="axs-4f-Cpl"/>
+                        <outlet property="diceRollGroup" destination="vpH-e0-7a5" id="L7G-nB-JGm"/>
+                        <outlet property="diceRollResultLabel" destination="GDv-g4-l9x" id="K9g-BA-aUt"/>
+                        <outlet property="subrollResultLabel" destination="Ynh-Zo-hOw" id="YM9-65-4YS"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="1231" y="-21"/>
+            <point key="canvasLocation" x="1161" y="-21"/>
         </scene>
     </scenes>
     <resources>
