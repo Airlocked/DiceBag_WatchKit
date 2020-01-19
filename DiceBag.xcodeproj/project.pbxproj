@@ -12,7 +12,7 @@
 		B09F827323D2434D008A15F8 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B09F827123D2434D008A15F8 /* Interface.storyboard */; };
 		B09F827523D2434E008A15F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B09F827423D2434E008A15F8 /* Assets.xcassets */; };
 		B09F827C23D2434E008A15F8 /* DiceBag WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B09F827B23D2434E008A15F8 /* DiceBag WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		B09F828123D2434E008A15F8 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09F828023D2434E008A15F8 /* InterfaceController.swift */; };
+		B09F828123D2434E008A15F8 /* DicePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09F828023D2434E008A15F8 /* DicePageController.swift */; };
 		B09F828323D2434E008A15F8 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09F828223D2434E008A15F8 /* ExtensionDelegate.swift */; };
 		B09F828523D2434E008A15F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B09F828423D2434E008A15F8 /* Assets.xcassets */; };
 		B0A1F71723D2FFD80061C6A8 /* DiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A719AA23D2F5FD00B55D2F /* DiceModel.swift */; };
@@ -68,7 +68,7 @@
 		B09F827423D2434E008A15F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B09F827623D2434E008A15F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B09F827B23D2434E008A15F8 /* DiceBag WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "DiceBag WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B09F828023D2434E008A15F8 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		B09F828023D2434E008A15F8 /* DicePageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DicePageController.swift; sourceTree = "<group>"; };
 		B09F828223D2434E008A15F8 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		B09F828423D2434E008A15F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B09F828623D2434F008A15F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -139,7 +139,7 @@
 		B0A719AC23D2F89600B55D2F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				B09F828023D2434E008A15F8 /* InterfaceController.swift */,
+				B09F828023D2434E008A15F8 /* DicePageController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -282,7 +282,7 @@
 				B0A1F71723D2FFD80061C6A8 /* DiceModel.swift in Sources */,
 				B09F828323D2434E008A15F8 /* ExtensionDelegate.swift in Sources */,
 				B066BBA523D3109700816BEB /* NumberHelper.swift in Sources */,
-				B09F828123D2434E008A15F8 /* InterfaceController.swift in Sources */,
+				B09F828123D2434E008A15F8 /* DicePageController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

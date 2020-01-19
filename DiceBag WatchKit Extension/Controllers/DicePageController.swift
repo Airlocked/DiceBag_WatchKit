@@ -9,7 +9,7 @@
 import WatchKit
 import Foundation
 
-extension InterfaceController {
+extension DicePageController {
 	enum Constants {
 		static let scrollTreshold: Double = 0.05
 		static let lowerDiceCount = 1
@@ -17,18 +17,17 @@ extension InterfaceController {
 	}
 }
 
-
-class InterfaceController: WKInterfaceController {
+class DicePageController: WKInterfaceController {
 	@IBOutlet weak var diceRollGroup: WKInterfaceGroup!
 	@IBOutlet weak var diceRollResult: WKInterfaceLabel!
 	@IBOutlet weak var diceCountLabel: WKInterfaceLabel!
 	
 	private var dice: DiceModel?
-	private var result: Int = 1
+	private var result: Int? = nil
 	
 	// Count dices with crown
-	private var scrollDelta: Double = 0
-	private var count: Int = 1
+	private var crownDelta: Double = 0
+	private var diceCount: Int = 1
 	
 	
 	private static var firstLoad = true
@@ -36,8 +35,8 @@ class InterfaceController: WKInterfaceController {
 	override func awake(withContext context: Any?) {
 		super.awake(withContext: context)
 		crownSequencer.focus()
-		if InterfaceController.firstLoad {
-			InterfaceController.firstLoad = false
+		if DicePageController.firstLoad {
+			DicePageController.firstLoad = false
 			WKInterfaceController.reloadRootControllers(withNamesAndContexts: [
 			(name: "D20", context: DiceModel.diceModels[0]),
 			(name: "D12", context: DiceModel.diceModels[1]),
@@ -57,43 +56,45 @@ class InterfaceController: WKInterfaceController {
 		guard let dice = dice else { return }
 		diceRollGroup.setBackgroundImage(dice.image)
 		setResult(result, haptic: nil)
-		setCount(count, haptic: nil)
+		setCount(diceCount, haptic: nil)
 	}
 
 	@IBAction func DiceTapped(_ sender: Any) {
 		guard let dice = dice else { return }
 		var resultValue: Int = 0
-		for _ in 0..<count {
+		for _ in 0..<diceCount {
 			resultValue += Int(arc4random_uniform(UInt32(dice.numberOfSides)) + 1)
 		}
 		setResult(resultValue, haptic: .click)
 	}
 	
-	private func setResult(_ result: Int, haptic: WKHapticType?) {
+	private func setResult(_ result: Int?, haptic: WKHapticType?) {
 		self.result = result
-		diceRollResult.setText("\(result)")
+		if let result = result {
+			diceRollResult.setText("\(result)")
+		}
 		guard let haptic = haptic else { return }
 		WKInterfaceDevice.current().play(haptic)
 	}
 	
 	private func setCount(_ count: Int, haptic: WKHapticType?) {
-		self.count = count.clamped(between: Constants.lowerDiceCount, and: Constants.upperDiceCount)
-		diceCountLabel.setText("x \(self.count)")
-		guard let haptic = haptic, self.count == count else { return }
+		self.diceCount = count.clamped(between: Constants.lowerDiceCount, and: Constants.upperDiceCount)
+		diceCountLabel.setText("x \(self.diceCount)")
+		guard let haptic = haptic, self.diceCount == count else { return }
 		WKInterfaceDevice.current().play(haptic)
 	}
 }
 
-extension InterfaceController: WKCrownDelegate {
+extension DicePageController: WKCrownDelegate {
 	func crownDidRotate(_ crownSequencer: WKCrownSequencer?, rotationalDelta: Double) {
-		scrollDelta += rotationalDelta
-		if scrollDelta > Constants.scrollTreshold {
-			setCount(count + 1, haptic: .click)
-			scrollDelta = 0
+		crownDelta += rotationalDelta
+		if crownDelta > Constants.scrollTreshold {
+			setCount(diceCount + 1, haptic: .click)
+			crownDelta = 0
 		}
-		else if scrollDelta < -Constants.scrollTreshold {
-			setCount(count - 1, haptic: .click)
-			scrollDelta = 0
+		else if crownDelta < -Constants.scrollTreshold {
+			setCount(diceCount - 1, haptic: .click)
+			crownDelta = 0
 		}
     }
 }
