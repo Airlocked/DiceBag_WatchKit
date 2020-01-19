@@ -13,7 +13,7 @@
                     <items>
                         <group width="1" alignment="center" verticalAlignment="center" layout="vertical" id="Gtc-V1-Jip">
                             <items>
-                                <group width="150" height="150" alignment="center" backgroundImage="d20_icon" contentMode="scaleAspectFit" layout="vertical" id="HJA-DJ-LpW" userLabel="DiceRollGroup">
+                                <group width="120" height="120" alignment="center" backgroundImage="d20_icon" contentMode="scaleAspectFit" layout="vertical" id="HJA-DJ-LpW" userLabel="DiceRollGroup">
                                     <items>
                                         <group width="1" alignment="center" verticalAlignment="center" layout="vertical" id="LNt-d3-KeJ">
                                             <items>
@@ -58,7 +58,7 @@
                     <items>
                         <group width="1" alignment="center" verticalAlignment="center" layout="vertical" id="i9h-iL-dUD">
                             <items>
-                                <group width="150" height="150" alignment="center" backgroundImage="d20_icon" contentMode="scaleAspectFit" layout="vertical" id="n96-o6-Mmn" userLabel="DiceRollGroup">
+                                <group width="120" height="120" alignment="center" backgroundImage="d20_icon" contentMode="scaleAspectFit" layout="vertical" id="n96-o6-Mmn" userLabel="DiceRollGroup">
                                     <items>
                                         <group width="1" alignment="center" verticalAlignment="center" layout="vertical" id="r2a-H3-gwe">
                                             <items>
@@ -103,7 +103,7 @@
                     <items>
                         <group width="1" alignment="center" verticalAlignment="center" layout="vertical" id="mpF-kq-ZyF">
                             <items>
-                                <group width="150" height="150" alignment="center" backgroundImage="d20_icon" contentMode="scaleAspectFit" layout="vertical" id="Hih-vN-Gci" userLabel="DiceRollGroup">
+                                <group width="120" height="120" alignment="center" backgroundImage="d20_icon" contentMode="scaleAspectFit" layout="vertical" id="Hih-vN-Gci" userLabel="DiceRollGroup">
                                     <items>
                                         <group width="1" alignment="center" verticalAlignment="center" layout="vertical" id="K1e-Qk-6SH">
                                             <items>
@@ -148,7 +148,7 @@
                     <items>
                         <group width="1" alignment="center" verticalAlignment="center" layout="vertical" id="tb4-K8-5J6">
                             <items>
-                                <group width="150" height="150" alignment="center" backgroundImage="d20_icon" contentMode="scaleAspectFit" layout="vertical" id="XAt-Sk-d0g" userLabel="DiceRollGroup">
+                                <group width="120" height="120" alignment="center" backgroundImage="d20_icon" contentMode="scaleAspectFit" layout="vertical" id="XAt-Sk-d0g" userLabel="DiceRollGroup">
                                     <items>
                                         <group width="1" alignment="center" verticalAlignment="center" layout="vertical" id="2ic-4c-kAR">
                                             <items>
@@ -193,7 +193,7 @@
                     <items>
                         <group width="1" alignment="center" verticalAlignment="center" layout="vertical" id="t15-0A-sgO">
                             <items>
-                                <group width="150" height="150" alignment="center" backgroundImage="d20_icon" contentMode="scaleAspectFit" layout="vertical" id="My6-j3-4V3" userLabel="DiceRollGroup">
+                                <group width="120" height="120" alignment="center" backgroundImage="d20_icon" contentMode="scaleAspectFit" layout="vertical" id="My6-j3-4V3" userLabel="DiceRollGroup">
                                     <items>
                                         <group width="1" alignment="center" verticalAlignment="center" layout="vertical" id="6Xp-tn-E1d">
                                             <items>
@@ -238,7 +238,7 @@
                     <items>
                         <group width="1" alignment="center" verticalAlignment="center" layout="vertical" id="usA-c0-JME">
                             <items>
-                                <group width="150" height="150" alignment="center" backgroundImage="d20_icon" contentMode="scaleAspectFit" layout="vertical" id="vpH-e0-7a5" userLabel="DiceRollGroup">
+                                <group width="120" height="120" alignment="center" backgroundImage="d20_icon" contentMode="scaleAspectFit" layout="vertical" id="vpH-e0-7a5" userLabel="DiceRollGroup">
                                     <items>
                                         <group width="1" alignment="center" verticalAlignment="center" layout="vertical" id="gW2-6c-Smq">
                                             <items>

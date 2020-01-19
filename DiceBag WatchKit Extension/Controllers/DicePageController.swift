@@ -14,6 +14,7 @@ extension DicePageController {
 		static let scrollTreshold: Double = 0.08
 		static let lowerDiceCount = 1
 		static let upperDiceCount = 10
+		static let diceImageSize = CGSize(width: 140, height: 140)
 	}
 }
 
@@ -37,7 +38,6 @@ class DicePageController: WKInterfaceController {
 	
 	override func awake(withContext context: Any?) {
 		super.awake(withContext: context)
-		crownSequencer.focus()
 		if DicePageController.firstLoad {
 			DicePageController.firstLoad = false
 			WKInterfaceController.reloadRootControllers(withNamesAndContexts: [
@@ -51,15 +51,22 @@ class DicePageController: WKInterfaceController {
 			return
 		}
 		dice = context as? DiceModel
+		diceRollGroup?.setWidth(Constants.diceImageSize.width)
+		diceRollGroup?.setHeight(Constants.diceImageSize.height)
 	}
 	
 	override func willActivate() {
 		super.willActivate()
-		crownSequencer.delegate = self
 		guard let dice = dice else { return }
 		diceRollGroup?.setBackgroundImage(dice.image)
 		setResult(result, haptic: nil)
 		setCount(diceCount, haptic: nil)
+	}
+	
+	override func didAppear() {
+		super.didAppear()
+		crownSequencer.delegate = self
+		crownSequencer.focus()
 	}
 
 	@IBAction func DiceTapped(_ sender: Any) {
