@@ -9,7 +9,7 @@
 import UIKit
 
 extension Int {
-	func clamped(between lowerValue: Int, and upperValue: Int) -> Int {
+	func clamp(between lowerValue: Int, and upperValue: Int) -> Int {
 		guard lowerValue < upperValue else { return self }
 		guard self >= lowerValue else { return lowerValue }
 		guard self <= upperValue else { return upperValue }

@@ -97,7 +97,7 @@ class DicePageController: WKInterfaceController {
 	}
 	
 	private func setCount(_ count: Int, haptic: WKHapticType?) {
-		self.diceCount = count.clamped(between: Constants.lowerDiceCount, and: Constants.upperDiceCount)
+		self.diceCount = count.clamp(between: Constants.lowerDiceCount, and: Constants.upperDiceCount)
 		diceCountLabel?.setText("x \(self.diceCount)")
 		guard let haptic = haptic, self.diceCount == count else { return }
 		WKInterfaceDevice.current().play(haptic)
